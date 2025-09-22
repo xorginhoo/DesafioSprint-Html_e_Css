@@ -1,0 +1,13 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffff;
+}
+
+.navbar a{
+    color: #0000AA;
+}
+
+footer {
+    background-color: #0000AA;
+    color: aliceblue;
+}
