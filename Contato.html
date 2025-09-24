@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ford Brasil</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bruno+Ace&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -14,33 +14,39 @@
 
 <body>
     <!-- navbar -->
-    <header class="navbar">
-        <img src="img/logo-ford-256.png">
+    <header>
+        
+        <img class="logotipo" src="img/logo-ford-256.png">
+
 
         <nav>
-            <ul class="class="header__ul">
-                <a class="header__ul__li" href="Home.html">Home</a>
-                <a class="header__ul__li" href="Lancamento.html">Lançamento</a>
-                <a class="header__ul__li" href="Contato.html">Contato</a>
+            <ul class="guia-home">
+                <a href="Home.html">Home</a>
+                <a href="Lancamento.html">Lançamento</a>
+                <a href="Contato.html">Contato</a>
             </ul>
         </nav>
+       <div></div>
     </header>
 
     <main class="main-contato">
-        <section>
+        <div>
             <img src="img/xls 2.2 diesel.jpg">
-        </section>
-        <section>
-            <label>Sobre Você</label><br>
-            <input type="text" placeholder="NOME *"><br>
-            <input type="text" placeholder="E-MAIL *"><br>
-            <input type="text" placeholder="CPF *"><br>
-            <input type="text" placeholder="SOBRENOME *"><br>
-            <input type="text" placeholder="TELEFONE *"><br>
-            <input type="text" placeholder="COMO DESJA SER CHAMADO"><br>
+        </div>
+
+        <div class="dados-cadastrais">
+            <label class="sobre">Sobre Você</label><br>
+                <input class="input-dados" type="text" placeholder="NOME *"><br>
+                <input class="input-dados" type="text" placeholder="E-MAIL *"><br>
+                <input class="input-dados" type="text" placeholder="CPF *"><br>
+                <input class="input-dados" type="text" placeholder="SOBRENOME *"><br>
+                <input class="input-dados" type="text" placeholder="TELEFONE *"><br>
+                <input class="input-dados" type="" placeholder="COMO DESEJA SER CONTATADO?"><br>
             
-            <button class="enviar">Enviar</button>
-        </section>
+            <div class="button-enviar">
+                <button class="enviar">Enviar</button>
+            </div>
+        </div>
     </main>
     
     <!-- Rodapé -->
