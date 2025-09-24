@@ -5,47 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ford Brasil</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!-- navbar -->
-    <header class="navbar">
-        <img src="img/logo-ford-256.png">
+    <header>
+      
+        <img class="logotipo" src="img/logo-ford-256.png">
+
 
         <nav>
-            <a href="Home.html">Home</a>
-            <a href="Lancamento.html">Lançamento</a>
-            <a href="Contato.html">Contato</a>
+            <ul class="guia-home">
+                <a href="Home.html">Home</a>
+                <a href="Lancamento.html">Lançamento</a>
+                <a href="Contato.html">Contato</a>
+            </ul>
         </nav>
+       <div></div>
     </header>
 
     <main>
         <iframe class="video" src="https://www.youtube.com/embed/vQsryuNmsL0?si=170iBBkNFBmjjX1y"
             frameborder="0"></iframe>
+
+
         <section class="carros">
+
+
+
             <section>
                 <img src="img/XL Cabine.jpg">
+                <div class="carsCard__div--2">
+                    <a href="#" class="carsCard__link">
+                      XL Cabine Simples 2.2 Diesel 4X4 MT 2022
+                    </a>
+                    <p class="carsCard__text">R$ 183.850</p>
+                  </div>
+            
                 <input class="checkbox" type="checkbox">
                 <a href="#"><img src="img/info.png"></a>
             </section>
+            
+]
+
+
+
+
+
+
 
             <section>
                 <img src="img/xls 2.2 diesel.jpg">
                 <input class="checkbox" type="checkbox">
+                <a href="#" class="carsCard__link">
+                    XLS 2.2 Diesel 4X4 AT 2022
+                  </a>
+                  <p class="carsCard__text">R$ 220.690</p>
+                </div>
                 <a href="#"><img src="img/info.png"></a>
 
             </section>
+
+
+
+
+
 
             <section>
                 <img src="img/storm.jpg">
                 <input class="checkbox" type="checkbox">
+                <div class="carsCard__div--2">
+                    <a href="#" class="carsCard__link">
+                      Storm 3.2 Diesel 4X4 AT 2022
+                    </a>
+                    <p class="carsCard__text">R$ 183.850</p>
+                  </div>
                 <a href="#"><img src="img/info.png"></a>
 
             </section>
         </section>
-        <button>Comparar Carros</button>
+
+        <div class="button-comparar">
+            <button type="submit" class="comparar">Comparar Carros</button>
+        </div>
     </main>
 
 
