@@ -29,24 +29,34 @@
        <div></div>
     </header>
 
-    <main class="main-contato">
-        <div>
-            <img src="img/xls 2.2 diesel.jpg">
-        </div>
+    <main>
 
-        <div class="dados-cadastrais">
-            <label class="sobre">Sobre Você</label><br>
-                <input class="input-dados" type="text" placeholder="NOME *"><br>
-                <input class="input-dados" type="text" placeholder="E-MAIL *"><br>
-                <input class="input-dados" type="text" placeholder="CPF *"><br>
-                <input class="input-dados" type="text" placeholder="SOBRENOME *"><br>
-                <input class="input-dados" type="text" placeholder="TELEFONE *"><br>
-                <input class="input-dados" type="" placeholder="COMO DESEJA SER CONTATADO?"><br>
-            
-            <div class="button-enviar">
-                <button class="enviar">Enviar</button>
+        <section class="main-contato">
+
+            <div>
+                <img class="carro-contato" src="img/xls 2.2 diesel.jpg">
             </div>
-        </div>
+    
+            <div class="dados-cadastrais">
+                <label class="sobre">Sobre Você</label><br>
+                    <input class="input-dados" type="text" placeholder="NOME *"><br>
+                    <input class="input-dados" type="text" placeholder="E-MAIL *"><br>
+                    <input class="input-dados" type="text" placeholder="CPF *"><br>
+                    <input class="input-dados" type="text" placeholder="SOBRENOME *"><br>
+                    <input class="input-dados" type="text" placeholder="TELEFONE *"><br>
+                    
+                    <select class="input-dados">
+                        <option class="ask" value="" disabled selected>COMO DESEJA SER CONTATADO?</option>
+                        <option value="email">E-MAIL</option>
+                        <option value="telefone">TELEFONE</option>
+                    </select>
+                    
+                    <div class="button-enviar">
+                        <button class="enviar">Enviar</button>
+                    </div>
+
+            </div>
+        </section>
     </main>
     
     <!-- Rodapé -->
