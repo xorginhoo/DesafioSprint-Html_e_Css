@@ -12,7 +12,7 @@
 <body>
     <!-- navbar -->
     <header>
-      
+
         <img class="logotipo" src="img/logo-ford-256.png">
 
 
@@ -23,7 +23,7 @@
                 <a href="Contato.html">Contato</a>
             </ul>
         </nav>
-       <div></div>
+        <div></div>
     </header>
 
     <main>
@@ -31,61 +31,57 @@
             frameborder="0"></iframe>
 
 
-        <section class="carros">
-
-
-
-            <section>
-                <img src="img/XL Cabine.jpg">
-                <div class="carsCard__div--2">
-                    <a href="#" class="carsCard__link">
-                      XL Cabine Simples 2.2 Diesel 4X4 MT 2022
-                    </a>
-                    <p class="carsCard__text">R$ 183.850</p>
-                  </div>
-            
-                <input class="checkbox" type="checkbox">
-                <a href="#"><img src="img/info.png"></a>
-            </section>
-            
-]
-
-
-
-
-
-
-
-            <section>
-                <img src="img/xls 2.2 diesel.jpg">
-                <input class="checkbox" type="checkbox">
-                <a href="#" class="carsCard__link">
-                    XLS 2.2 Diesel 4X4 AT 2022
-                  </a>
-                  <p class="carsCard__text">R$ 220.690</p>
+            <div class="container">
+                <div class="cards-grid">
+                    <!-- Card 1 -->
+                    <div class="car-card">
+                        <img src="img/XL Cabine.jpg" alt="Pickup Vermelha" class="car-image">
+                        <div class="card-footer">
+                            <div class="checkbox-section">
+                                <input type="checkbox" id="car1" class="hidden-checkbox" checked>
+                                <label for="car1" class="custom-checkbox checked"></label>
+                                <div class="product-name">
+                                    Cabine Simples 2.2 Diesel<br>
+                                    4x4 MT Flex Work
+                                </div>
+                            </div>
+                            <button class="info-button" onclick="showInfo('Cabine Simples 2.2 Diesel 4x4 MT Flex Work')">i</button>
+                        </div>
+                    </div>
+        
+                    <!-- Card 2 -->
+                    <div class="car-card">
+                        <img src="img/xls 2.2 diesel.jpg" alt="Pickup Vermelha" class="car-image">
+                        <div class="card-footer">
+                            <div class="checkbox-section">
+                                <input type="checkbox" id="car2" class="hidden-checkbox">
+                                <label for="car2" class="custom-checkbox"></label>
+                                <div class="product-name">
+                                    Cabine Dupla 2.2 Diesel<br>
+                                    4x4 AT Premium
+                                </div>
+                            </div>
+                            <button class="info-button" onclick="showInfo('Cabine Dupla 2.2 Diesel 4x4 AT Premium')">i</button>
+                        </div>
+                    </div>
+        
+                    <!-- Card 3 -->
+                    <div class="car-card">
+                        <img src="/img/storm.jpg" alt="Pickup Vermelha" class="car-image">
+                        <div class="card-footer">
+                            <div class="checkbox-section">
+                                <input type="checkbox" id="car3" class="hidden-checkbox">
+                                <label for="car3" class="custom-checkbox"></label>
+                                <div class="product-name">
+                                    Cabine Dupla 3.2 Diesel<br>
+                                    4x4 AT Storm
+                                </div>
+                            </div>
+                            <button class="info-button" onclick="showInfo('Cabine Dupla 3.2 Diesel 4x4 AT Storm')">i</button>
+                        </div>
+                    </div>
                 </div>
-                <a href="#"><img src="img/info.png"></a>
-
-            </section>
-
-
-
-
-
-
-            <section>
-                <img src="img/storm.jpg">
-                <input class="checkbox" type="checkbox">
-                <div class="carsCard__div--2">
-                    <a href="#" class="carsCard__link">
-                      Storm 3.2 Diesel 4X4 AT 2022
-                    </a>
-                    <p class="carsCard__text">R$ 183.850</p>
-                  </div>
-                <a href="#"><img src="img/info.png"></a>
-
-            </section>
-        </section>
+            </div>
 
         <div class="button-comparar">
             <button type="submit" class="comparar">Comparar Carros</button>
@@ -102,7 +98,7 @@
                 <a href="https://www.youtube.com/@ford/videos"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
                 <a href="https://www.instagram.com/fordbrasil/"><img src="img/instagram-logo-50.png"
                         alt="Instagram"></a>
-                </div>
+            </div>
             <img class="footer-logo" src="img/ford-96.png" alt="Ford Logo">
         </div>
     </footer>
