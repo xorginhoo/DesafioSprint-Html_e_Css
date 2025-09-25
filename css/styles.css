@@ -68,7 +68,7 @@ main {
     align-items: center;
     justify-content: center;
     margin-top: 12px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .social-links {
@@ -107,13 +107,10 @@ main {
 /*Lançamento*/
 .video {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 }
 
-.carros {
-    display: flex;
-    justify-content: center;
-}
+
 
 .checkbox {
     width: 30px;
@@ -135,6 +132,128 @@ main {
     border: none;
 }
 
+.comparar:hover{
+    background-color: #1b357e;
+   
+}
+
+
+ .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .car-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .car-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        .checkbox-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .custom-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .custom-checkbox.checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .custom-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .product-name {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+            flex: 1;
+            margin-left: 4px;
+        }
+
+        .info-button {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .info-button:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+
+        .hidden-checkbox {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .cards-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .car-card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
 
 
 
@@ -144,10 +263,20 @@ main {
 .main-contato {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 12vh;
+    
+}
+
+.carro-contato{
+    width: 45vh;
+    margin:0 4vh 20vh;
+    
 }
 
 .sobre {
     font-weight: 600;
+    font-size: 20px;
     display: block; 
     text-align: left;
     margin: 0 0 0 5px;
@@ -156,10 +285,24 @@ main {
 .input-dados {
     width: 330px;
     height: 45px;
-    border-radius: 8px;
-    margin: 5px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
     border: solid 1px #b5b5b5;
+    padding: 0 0 0 8px;
 }
+
+select.input-dados {
+    width: 336px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    border: solid 1px #b5b5b5;
+    padding: 0 0 0 8px;
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+    background-color: white;
+}
+
 
 .button-enviar {
     padding: 15px;
@@ -167,10 +310,11 @@ main {
     text-align: right;
     justify-content:right;
     margin-right: 0;
+    padding: 0;
 }
 
 .enviar {
-    width: 290px;
+    width: 220px;
     height: 45px;
     border-radius: 12px;
     background-color: #1351d8;
@@ -178,4 +322,8 @@ main {
     font-weight: 500;
     font-size: 120%;
     border: none;
+}
+.enviar:hover{
+    background-color: #1b357e;
+   
 }
