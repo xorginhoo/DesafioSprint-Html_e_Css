@@ -11,23 +11,23 @@
 
 <body>
     <!-- navbar -->
-    <header>
+     <!-- navbar -->
+     <header>
 
         <img class="logotipo" src="img/logo-ford-256.png">
 
 
-        <nav>
-
-            <button class="menu-hamburger"></button>
-
-
-            <ul class="guia-home">
-                <a href="Home.html">Home</a>
-                <a href="Lancamento.html">Lançamento</a>
-                <a href="Contato.html">Contato</a>
+        <nav id="nav">
+            <button id="btn-mobile"><img src="icon/menu.svg" id="menu-icon"></button>
+            <ul id="menu">
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="Lancamento.html">Lançamento</a> </li>
+                <li><a href="Contato.html">Contato</a> </li>
             </ul>
         </nav>
-        <div></div>
+
+        <div id="nulo"></div>
+
     </header>
 
     <main>
@@ -111,19 +111,35 @@
     </main>
 
 
-    <!-- Rodapé -->
-    <footer>
+     <!-- Rodapé -->
+     <footer>
         <div class="main-footer">
             <div class="social-links">
                 <label class="footer-title">Redes Sociais</label>
                 <a href="https://www.facebook.com/FordBrasil/"><img src="img/facebook-50.png" alt="Facebook"></a>
                 <a href="https://www.youtube.com/@ford/videos"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
-                <a href="https://www.instagram.com/fordbrasil/"><img src="img/instagram-logo-50.png"
-                        alt="Instagram"></a>
+                <a href="https://www.instagram.com/fordbrasil/"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
             </div>
+
+            <div>
+                <p id="copyright">© 2025 Ford Brasil Ltda. Todos os direitos reservados.</p>
+            </div>
+
             <img class="footer-logo" src="img/ford-96.png" alt="Ford Logo">
         </div>
     </footer>
+
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active')
+
+        }
+
+        btnMobile.addEventListener("click", toggleMenu)
+    </script>
 </body>
 
 
