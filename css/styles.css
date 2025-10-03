@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #ffff;
     margin: 0;
@@ -5,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Arial', Arial, Verdana, serif;
+    font-family: "Arial", Arial, Verdana, serif;
     box-sizing: border-box;
 }
 
@@ -16,51 +21,216 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border: 1px solid rgb(215, 215, 215);
+    border-bottom: 1px solid rgb(215, 215, 215);
+    position: relative;
+    z-index: 1000;
+}
 
+#copyright {
+    font-size: 12px;
+    margin: 0;
+}
+
+#menu-icon {
+    width: 35px;
+    height: 35px;
 }
 
 .logotipo {
-    width: 150px;
+    width: 110px;
+    padding: 10px;
 }
 
-.menu-hamburger{ 
+#btn-mobile {
     display: none;
     border: none;
-    background: none;
-    border-top: 3px solid #ffffff;
+    background-color: transparent;
     cursor: pointer;
+    padding: 8px;
+    position: relative;
+    z-index: 10001;
 }
 
-.menu-hamburger::before,
-.menu-hamburger::after{
-    content: "";
+/* Added proper hamburger menu styling */
+.hamburger {
     display: block;
-    width: 30px;
+    width: 25px;
     height: 3px;
-    background:#fff;
-    margin-top: 5px;
+    background-color: #1351d8;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #1351d8;
+    transition: all 0.3s ease;
+}
 
-.guia-home {
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+#nav{
+    margin-right: 100px;
+
+}
+
+/* Hamburger animation when menu is active */
+#nav.active .hamburger {
+    background-color: transparent;
+}
+
+#nav.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#nav.active .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+@media (max-width: 600px) {
+   
+    #nav{
+        margin: 0;
+    
+    }
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-links label {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .social-links a img {
+        width: 30px;
+        margin: 0;
+    }
+
+    #copyright {
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        width: 70px;
+    }
+
+    #btn-mobile {
+        display: block;
+    }
+
+    #nulo {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100vw;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        transition: all 0.4s ease;
+        gap: 80px;
+        z-index: 10000;
+        margin: 0;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    #nav.active #menu {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu a {
+        color: #1351d8;
+        font-size: 28px;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+    }
+
+    /* Added hover effect for mobile menu items */
+    #menu a:hover {
+        color: #1b357e;
+    }
+
+    .main-contato {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carro-contato {
+        width: 45vh;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .button-enviar {
+        margin-bottom: 5vh;
+    }
+
+    header {
+        margin: 0;
+        padding: 0;
+    }
+
+
+}
+
+#menu {
     color: #1351d8;
     display: flex;
     text-align: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    margin: 0 10px;
+
+    list-style: none;
+    padding: 0;
 }
 
-
-.guia-home a {
+#menu a {
     text-decoration: none;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #1351d8;
+    transition: color 0.3s ease;
+}
 
+#menu a:hover {
+    color: #1b357e;
 }
 
 main {
@@ -69,7 +239,6 @@ main {
     text-align: center;
 }
 
-
 .main-footer {
     background-color: #1b357e;
     color: aliceblue;
@@ -77,27 +246,28 @@ main {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
     padding: 10px;
     box-sizing: border-box;
     margin-top: auto;
 }
 
 .footer-title {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 12px;
+    justify-content: space-between;
     font-weight: 500;
 }
 
 .social-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
 .social-links a img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
 }
 
 .footer-logo {
@@ -105,31 +275,26 @@ main {
     padding: 0 10px;
 }
 
-
-
 /*Home*/
+#ranger-home-link {
+    transition: all 0.3s ease;
+}
+
 .ranger-home {
     padding: 0px 0 10px;
-    width: 83%;
+    width: 87%;
 }
 
 .ranger-text {
-    padding-bottom: 0px;
+    padding: 10px;
     align-items: center;
 }
-
-
-
-
-
 
 /*Lançamento*/
 .video {
     width: 100%;
-    height: 50vh;
+    height: 45vh;
 }
-
-
 
 .checkbox {
     width: 30px;
@@ -153,9 +318,7 @@ main {
 
 .comparar:hover {
     background-color: #1b357e;
-
 }
-
 
 .container {
     max-width: 1200px;
@@ -175,8 +338,6 @@ main {
     padding: 0 70px 0 20px;
     width: 280px;
     position: relative;
-
-
 }
 
 .car-image {
@@ -218,10 +379,10 @@ main {
 
 .product-name {
     display: flex;
-    flex-direction: column;  /* título em cima, preço embaixo */
-    justify-content: center; /* centraliza em relação à checkbox */
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
-    flex: 1;        
+    flex: 1;
     text-decoration: none;
 }
 
@@ -233,9 +394,6 @@ main {
 .product-name .price {
     font-size: 12px;
 }
-
-
-
 
 @media (max-width: 768px) {
     .cards-grid {
@@ -249,27 +407,17 @@ main {
     }
 }
 
-
-
-
-
-
-
-
-
 /*Contato*/
 .main-contato {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 12vh;
-
 }
 
 .carro-contato {
     width: 45vh;
     margin: 0 4vh 20vh;
-
 }
 
 .sobre {
@@ -284,10 +432,25 @@ main {
     width: 330px;
     height: 45px;
     border-radius: 10px;
-    margin: 0 0 10px 0;
+    margin: 0 0 3px 0;
     border: solid 1px #b5b5b5;
     padding: 0 0 0 8px;
 }
+
+
+.text-area::placeholder {
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, serif;
+    font-weight: 500;
+}
+
+
+.dados-cadastrais {
+    display: flex;
+    flex-direction: column;
+}
+
 
 select.input-dados {
     width: 336px;
@@ -300,7 +463,6 @@ select.input-dados {
     color: rgb(112, 112, 112);
     background-color: white;
 }
-
 
 .button-enviar {
     padding: 15px;
@@ -324,7 +486,4 @@ select.input-dados {
 
 .enviar:hover {
     background-color: #1b357e;
-
 }
-
-/*Responsividade Menu*/
